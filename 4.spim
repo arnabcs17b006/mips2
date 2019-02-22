@@ -1,0 +1,12 @@
+main:
+	addi $s0,$0,1
+	addi $s1,$0,2
+  and $t0,$s0,$s1   
+  or $t1,$s0,$s1	  
+  xor $t2,$s0,$s1	  
+	nor $t3,$0,$t2	  
+	nor $t4,$0,$s1	  
+  li $t5,0x01
+	and $t6,$s1,$t5	  #AND masking of $s1
+  or $t7,$s1,$t5	  #OR masking of $s0
+  

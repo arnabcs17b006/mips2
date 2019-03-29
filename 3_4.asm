@@ -1,11 +1,21 @@
 main:
-  	addi $sp,$sp,-8
-	  sw $t0,4($sp)
-    sw $t1,0($sp)
-  	li $t0,3
-    il $t1,2
-  	srl $t0,$t0,$t1
-    lw $t1,0($sp)
-    lw $t0,4($sp)
-  	addi $sp,$sp,4
-    j $31
+	addi $sp,$sp,-20
+	sw $s0,16($sp)
+	sw $s1,12($sp)
+	sw $s2,8($sp)
+	sw $s3,4($sp)
+	sw $s4,0($sp)
+	addi $s0,$zero,5
+	addi $s1,$zero,1
+	srlv $s2,$s0,$s1
+	addi $s1,$s1,1
+	srlv $s3,$s0,$s1
+	addi $s1,$s1,1
+	srlv $s4,$s0,$s1
+	lw $s4,0($sp)
+	lw $s3,4($sp)
+	lw $s2,8($sp)
+	lw $s1,12($sp)
+	lw $s0,16($sp)
+	addi $sp,$sp,20
+j $31

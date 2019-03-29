@@ -5,7 +5,7 @@ main:
 	sw $s2,8($sp)
 	sw $s3,4($sp)
 	sw $s4,0($sp)
-	addi $s0,$zero,5
+	addi $s0,$zero,8
 	addi $s1,$zero,1
 	srlv $s2,$s0,$s1
 	addi $s1,$s1,1

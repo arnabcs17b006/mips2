@@ -4,10 +4,10 @@ main:
   sw $s1,0($sp)
   addi $s0,$zero,2
   addi $s1,$zero,3
-  addi $s2,$s0,$zero
-  addi $s0,$s1,$zero
-  addi $s1,$s2,$zero
-  lw $s1,0($sp)
-  lw $s0,4($sp)
+  add $t0,$s0,$zero
+  add $s0,$s1,$zero
+  add $s1,$t0,$zero
+  lw $s0,0($sp)
+  lw $s1,4($sp)
   addi $sp,$sp,8
   j $31

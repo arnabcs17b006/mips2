@@ -12,10 +12,10 @@ main:
 	and   $s3,$s0,$s1
 	xor  $s4,$s0,$zero
 	nor  $s5,$s0,$s1
-	and $t6, $s0, 0x8c		
-	or $t7, $s0, 0x8c	
-	xor $s0, $s0, $s0		
-	not $t8, $s0 
+	and $t6, $s0, 0x8c	#and mask	
+	or $t7, $s0, 0x8c	#or mask
+	xor $s0, $s0, $s0	#xor reset to zero	
+	not $t8, $s0       # 1s complement
 	lw   $s5,0($sp)
 	lw   $s4,4($sp)
 	lw   $s3,8($sp)
